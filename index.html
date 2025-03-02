@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('6daac9b17a2071c245aabbf493e70e1b');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '𝗦𝗘 𝗞𝗢𝗥𝗘𝗔',
+        description: '명품(名品), 혁신(革新), 도약(跳躍)',
+        imageUrl:
+          'https://i.ibb.co/HLwz2FJd/1740792513067.jpg',
+        link: {
+          mobileWebUrl: 'https://i.ibb.co/HLwz2FJd/1740792513067.jpg',
+          webUrl: 'https://i.ibb.co/HLwz2FJd/1740792513067.jpg',
+        },
+      },
+      social: {
+        likeCount: 237, //99999가 최대입니다
+        commentCount: 98, //99999가 최대입니다
+        sharedCount: 21, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '𝗦𝗘 𝗞𝗢𝗥𝗘𝗔 바로가기',
+          link: {
+            mobileWebUrl: 'https://open.kakao.com/o/gUa2wnch',
+            webUrl: 'https://open.kakao.com/o/gUa2wnch',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
